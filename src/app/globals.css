@@ -48,3 +48,18 @@ body {
 .hero-gradient-text {
   @apply bg-gradient-to-r from-purple-500 to-white bg-clip-text text-transparent;
 }
+
+@layer utilities {
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 1s ease infinite;
+  }
+}

@@ -4,14 +4,14 @@ const Hero = () => {
   return ( 
     <section>
       <div className="flex flex-col items-center justify-center gap-4 px-2 lg:gap-2 lg:pl-10 xl:pl-0">
-
+        
         <div className="pt-24">
           <h2 className="font-bold text-2xl md:text-3xl">👋🏻 Hi, I&apos;m Tiago a</h2>
         </div>
-        
+
         <div className="hero-gradient-text justify-center text-center text-[10vw] font-bold leading-[11vw] lg:text-[4vw] lg:leading-[5vw] xl:text-[4.5vw] xl:leading-tight">
           Full-Stack Web <br/> Developer
-        </div>
+        </div>            
 
         <p className="text-white/70 text-base text-center md:text-xl py-6 md:py-12 max-w-2xl">
           Crafting scalable and high-performance web applications with modern technologies.
@@ -27,7 +27,7 @@ const Hero = () => {
           <a
             href="https://github.com/TiagoCoder2022"
             target="_blank"
-            className="flex px-3 font-semibold gap-1 place-items-center rounded-xl py-3 text-center text-sm text-white transition-all hover:bg-white hover:text-black hover:shadow-cta xl:px-8 xl:py-3 xl:text-lg duration-300"
+            className="flex px-3 font-semibold bg-zinc-900 gap-1 place-items-center rounded-xl py-3 text-center text-sm text-white transition-all hover:bg-white hover:text-black hover:shadow-cta xl:px-8 xl:py-3 xl:text-lg duration-300"
           >
             <span>Github</span>
             <FiArrowUpRight size={20}/>
