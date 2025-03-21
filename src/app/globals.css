@@ -19,3 +19,32 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+/* .marquee-fast .animate-marquee {
+  animation-duration: 15s;
+}
+
+.marquee-slow .animate-marquee {
+  animation-duration: 40s;
+} */
+
+/* Add this new class */
+.hero-gradient-text {
+  @apply bg-gradient-to-r from-purple-500 to-white bg-clip-text text-transparent;
+}
