@@ -7,7 +7,7 @@ import LoadingScreen from "@/components/loading-screen";
 
 import { useState } from "react";
 import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Contact from "@/components/contact";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,12 +16,12 @@ export default function Home() {
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       {isLoaded && (
         <main>
-          <Navbar />          
+          <Navbar />
           <Hero />
           <Technologies />
-          <About />          
+          <About />
           <Projects />
-          <Footer />
+          <Contact />
         </main>
       )}
     </>
