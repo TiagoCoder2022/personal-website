@@ -29,21 +29,21 @@ export default function ProjectContent({
   features,
   date
 }: ProjectContentProps) {
-  return (      
-    <div className="flex flex-col gap-4 p-0 ">     
-      <div className="w-full rounded-lg">
-        <div className="relative h-[460px] w-full rounded-lg shadow-sm">
+  return (
+    <div className="flex flex-col gap-4 p-0 ">
+      <div className="w-full rounded-lg pt-4">
+        <div className="relative h-[260px] md:h-[460px] w-full rounded-lg shadow-sm">
           <Image
             src={imgSrc}
             alt={title}
             fill
             sizes="100%"
-            className="object-cover md:rounded-xl"
+            className="object-cover rounded-xl"
           />
         </div>
-      </div>      
-      
-      <div className="flex w-full flex-row shadow-sm mt-5 gap-8">        
+      </div>
+
+      <div className="flex w-full flex-col md:flex-row shadow-sm mt-5 gap-8">
         <div className="">
           <div className="flex items-center gap-4">
             <h1 className="text-4xl font-bold text-gray-100">{title}</h1>
@@ -62,7 +62,7 @@ export default function ProjectContent({
             </ul>
           </div>
         </div>
-        
+
         <div className="h-fit lg:sticky lg:top-8">
           <div className="space-y-8 rounded-xl border border-gray-800 bg-gray-900/50 p-6 backdrop-blur-sm">
             {/* Project Links */}
@@ -85,24 +85,20 @@ export default function ProjectContent({
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h2 className="mb-4 text-xl font-semibold text-gray-100">
                 Technologies
               </h2>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
-                  <Badge
-                    key={tag}                   
-                  >
-                    {tag}
-                  </Badge>
+                  <Badge key={tag}>{tag}</Badge>
                 ))}
               </div>
             </div>
           </div>
         </div>
-      </div>      
-    </div>    
+      </div>
+    </div>
   );
 }

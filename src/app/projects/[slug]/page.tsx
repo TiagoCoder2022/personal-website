@@ -26,12 +26,12 @@ const ProjectsPage = ({ params }: ProjectPageProps) => {
   }
 
   return (
-    <main className="flex min-h-screen flex-col justify-center w-full pb-10 mx-auto px-5">
+    <main className="flex min-h-screen flex-col justify-center w-full pb-10 mx-auto">
       <Navbar />
-      <div className="container mx-auto flex-1 px-6 sm:px-8">
-        <ProjectContent {...projectData}/>
+      <div className="container mx-auto flex-1 px-5 md:px-6 sm:px-8">
+        <ProjectContent {...projectData} />
         <Footer />
-      </div>      
+      </div>
     </main>
   );
 };
