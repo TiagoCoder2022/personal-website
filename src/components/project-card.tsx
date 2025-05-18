@@ -4,7 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 interface ProjectCardProps {
   title: string;
   subtitle: string;
-  imgSrc: string;
+  imgCover: string;
   isHovered: boolean;
   isBlurred: boolean;
   onMouseEnter: () => void;
@@ -14,7 +14,7 @@ interface ProjectCardProps {
 const ProjectCard = ({
   title,
   subtitle,
-  imgSrc,
+  imgCover,
   isHovered,
   isBlurred,
   onMouseEnter,
@@ -29,7 +29,7 @@ const ProjectCard = ({
       {/* Aplicando os efeitos SOMENTE na imagem */}
       <div className="overflow-hidden rounded-xl shadow-md">
         <Image
-          src={imgSrc}
+          src={imgCover}
           height={400}
           width={400}
           alt="projects"

@@ -94,14 +94,14 @@ export const LogoList = ({ startIndex = 0 }: { startIndex?: number }) => (
         >
           <Logo {...logo} />
         </div>
-      )),
+      ))
     ).flat()}
   </div>
 );
 
 export default function Technologies() {
   return (
-    <div className="lg:mt-22 relative z-40 mx-auto mb-[-75px] mt-[50px] flex flex-col gap-3 text-white lg:mb-0 lg:max-w-[1080px] lg:gap-6">
+    <div className="lg:mt-22 relative z-40 mx-auto mb-[-75px] mt-[50px] flex flex-col gap-3 text-white lg:mb-0 lg:max-w-[1080px] lg:gap-6 pb-20">
       <h2 className="mx-auto mb-3 w-full px-8 text-center text-sm lg:mb-0 lg:max-w-none lg:px-0 lg:text-xl">
         Main used technologies
       </h2>
@@ -110,9 +110,9 @@ export default function Technologies() {
         className="relative flex w-full overflow-hidden"
         style={{
           maskImage:
-            'linear-gradient(to right, transparent, black 15%, black 85%, transparent 100%)',
+            "linear-gradient(to right, transparent, black 15%, black 85%, transparent 100%)",
           WebkitMaskImage:
-            'linear-gradient(to right, transparent, black 15%, black 85%, transparent 100%)',
+            "linear-gradient(to right, transparent, black 15%, black 85%, transparent 100%)",
         }}
       >
         <div className="flex animate-marquee whitespace-nowrap py-6">
@@ -122,7 +122,7 @@ export default function Technologies() {
         </div>
         <div
           className="flex animate-marquee-scroll whitespace-nowrap py-6"
-          style={{ animationDelay: '-20s' }}
+          style={{ animationDelay: "-20s" }}
           aria-hidden="true"
         >
           {Array.from({ length: 2 }, (_, i) => (

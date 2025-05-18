@@ -30,15 +30,21 @@ export default function ProjectContent({
   date
 }: ProjectContentProps) {
   return (
-    <div className="flex flex-col gap-4 p-0 ">
+    <div className="flex flex-col gap-4 pt-5">
+      <div className="flex justify-between items-center gap-4">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-100">
+          {title}
+        </h1>
+        <span className="text-gray-400 text-sm md:text-base">{date}</span>
+      </div>
       <div className="w-full rounded-lg pt-4">
-        <div className="relative h-[260px] md:h-[460px] w-full rounded-lg shadow-sm">
+        <div className="relative h-[260px] md:h-[460px] lg:h-[660px] w-full rounded-lg shadow-sm">
           <Image
             src={imgSrc}
             alt={title}
             fill
             sizes="100%"
-            className="object-cover rounded-xl"
+            className="object-cover object-top rounded-xl"
           />
         </div>
       </div>
@@ -46,16 +52,19 @@ export default function ProjectContent({
       <div className="flex w-full flex-col md:flex-row shadow-sm mt-5 gap-8">
         <div className="">
           <div className="flex items-center gap-4">
-            <h1 className="text-4xl font-bold text-gray-100">{title}</h1>
-            <span className="text-gray-400">{date}</span>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              About the project 💻
+            </h2>
           </div>
           <article className="prose prose-purple prose-invert mt-6 max-w-none">
-            <p className="text-lg text-gray-300">{description}</p>
+            <p className="text-base md:text-lg text-gray-300">{description}</p>
           </article>
 
-          <div className="mt-3">
-            <h2 className="text-2xl font-bold">Features</h2>
-            <ul className="mt-2">
+          <div className="mt-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              Features 🚀
+            </h2>
+            <ul className="mt-4 space-y-2 text-base md:text-lg text-gray-300">
               {features.map((feat, index) => (
                 <li key={index}>{feat}</li>
               ))}

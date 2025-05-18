@@ -40,7 +40,7 @@ const Hero = () => {
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+          className="relative z-10 mx-auto max-w-xl py-4 text-center text-base md:text-lg font-normal text-neutral-400"
         >
           I specialize in crafting high-performance web applications, optimizing
           user experiences, and writing clean, maintainable code.
@@ -63,7 +63,7 @@ const Hero = () => {
             Contact me
           </button>
           <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-transparent dark:text-white dark:hover:bg-gray-900">
-            Githiub
+            Github
           </button>
         </motion.div>
       </div>
