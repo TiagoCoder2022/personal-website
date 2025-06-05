@@ -1,45 +1,44 @@
+import Image from "next/image";
+import TailwindCSSLogo from "../../public/assets/svgs/Tailwind-Logo.svg";
+import ReactLogo from "../../public/assets/svgs/react-logo.svg";
+import TypescriptLogo from "../../public/assets/svgs/TS-Logo.svg";
+import FigmaLogo from "../../public/assets/svgs/figma-logo.svg";
+import VercelLogo from "../../public/assets/svgs/Vercel-Logo.svg";
+import OpenAILogo from "../../public/assets/svgs/openai-logo.svg";
+import Docker from "../../public/assets/svgs/docker.svg";
 
-import Image from 'next/image';
-import TailwindCSSLogo from '../../public/assets/svgs/Tailwind-Logo.svg';
-import ReactLogo from '../../public/assets/svgs/react-logo.svg';
-import TypescriptLogo from '../../public/assets/svgs/TS-Logo.svg';
-import FigmaLogo from '../../public/assets/svgs/figma-logo.svg';
-import VercelLogo from '../../public/assets/svgs/Vercel-Logo.svg';
-import OpenAILogo from '../../public/assets/svgs/openai-logo.svg';
-import Docker from '../../public/assets/svgs/docker.svg'; 
-
-export const logos = [     
+export const logos = [
   {
     src: OpenAILogo,
-    alt: 'OpenAI Logo',
-    name: 'OpenAI',
+    alt: "OpenAI Logo",
+    name: "OpenAI",
     width: 30,
     height: 30,
   },
-  { src: ReactLogo, alt: 'React Logo', name: 'React', width: 30, height: 30 },
+  { src: ReactLogo, alt: "React Logo", name: "React", width: 30, height: 30 },
   {
     src: VercelLogo,
-    alt: 'Vercel Logo',
-    name: 'Next.js',
+    alt: "Vercel Logo",
+    name: "Next.js",
     width: 30,
     height: 30,
   },
   {
     src: TypescriptLogo,
-    alt: 'TypeScript Logo',
-    name: 'TypeScript',
+    alt: "TypeScript Logo",
+    name: "TypeScript",
     width: 30,
     height: 30,
   },
   {
     src: TailwindCSSLogo,
-    alt: 'Tailwind CSS Logo',
-    name: 'Tailwind CSS',
+    alt: "Tailwind CSS Logo",
+    name: "Tailwind CSS",
     width: 30,
     height: 30,
-  },  
-  { src: FigmaLogo, alt: 'Figma Logo', name: 'Figma', width: 23, height: 23 },
-  { src: Docker, alt: 'Docker Logo', name: 'Docker', width: 30, height: 30}
+  },
+  { src: FigmaLogo, alt: "Figma Logo", name: "Figma", width: 23, height: 23 },
+  { src: Docker, alt: "Docker Logo", name: "Docker", width: 30, height: 30 },
 ];
 
 interface LogoProps {
@@ -101,13 +100,13 @@ export const LogoList = ({ startIndex = 0 }: { startIndex?: number }) => (
 
 export default function Technologies() {
   return (
-    <div className="lg:mt-22 relative z-40 mx-auto mb-[-75px] mt-[50px] flex flex-col gap-3 text-white lg:mb-0 lg:max-w-[1080px] lg:gap-6 pb-20">
-      <h2 className="mx-auto mb-3 w-full px-8 text-center text-sm lg:mb-0 lg:max-w-none lg:px-0 lg:text-xl">
+    <div className="lg:mt-22 relative z-10 mx-auto mb-[-75px] mt-[50px] flex flex-col gap-3 lg:mb-0 lg:max-w-[1080px] lg:gap-6 pb-20">
+      <h2 className="mx-auto mb-3 w-full px-8 text-center text-text-secondary text-sm lg:mb-0 lg:max-w-none lg:px-0 lg:text-base">
         Main used technologies
       </h2>
 
       <div
-        className="relative flex w-full overflow-hidden"
+        className="relative flex w-full overflow-hidden text-text-primary border-y border-bg-700 py-sm"
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 15%, black 85%, transparent 100%)",
@@ -130,10 +129,6 @@ export default function Technologies() {
           ))}
         </div>
       </div>
-
-      <p className="mx-auto w-full max-w-[250px] text-center text-sm opacity-60 lg:max-w-none">
-        Staying ahead of the curve and surfing the waves of innovation
-      </p>
     </div>
   );
 }
