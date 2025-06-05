@@ -2,11 +2,10 @@
 import About from "@/components/about";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
-import Technologies from "@/components/technoligies";
 import LoadingScreen from "@/components/loading-screen";
+import Footer from "@/components/footer";
 
 import { useState } from "react";
-import Navbar from "@/components/navbar";
 import Contact from "@/components/contact";
 
 export default function Home() {
@@ -15,14 +14,13 @@ export default function Home() {
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       {isLoaded && (
-        <main>
-          <Navbar />
+        <>
           <Hero />
-          <Technologies />
           <About />
           <Projects />
           <Contact />
-        </main>
+          <Footer />
+        </>
       )}
     </>
   );

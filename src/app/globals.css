@@ -2,29 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🌒 Dark mode como padrão */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --text-primary: #f6f7ff;
+  --text-secondary: #a9a9bd;
+  --text-inverse: #0b0b0d;
+  --highlight: #b5ff6d;
+
+  --bg-600: #2c2c35;
+  --bg-700: #191920;
+  --bg-800: #111116;
+  --bg-900: #0b0b0d;
+
+  --backdrop: #0b0b0dcc;
+
+  --background: #09090b;
+  --foreground: #fafafa;
+
+  --card: #09090b;
+  --card-foreground: #fafafa;
+
+  --popover: #09090b;
+  --popover-foreground: #fafafa;
+
+  --primary: #fafafa;
+  --primary-foreground: #18181b;
+
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fafafa;
+
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #d4d4d8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base do body */
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 🌀 Animação marquee */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
-
   100% {
     transform: translateX(-50%);
   }
@@ -36,19 +68,12 @@ body {
   will-change: transform;
 }
 
-/* .marquee-fast .animate-marquee {
-  animation-duration: 15s;
-}
-
-.marquee-slow .animate-marquee {
-  animation-duration: 40s;
-} */
-
-/* Add this new class */
+/* 💫 Gradient text para hero */
 .hero-gradient-text {
   @apply bg-gradient-to-r from-purple-500 to-white bg-clip-text text-transparent;
 }
 
+/* 🔄 Utilitários customizados */
 @layer utilities {
   @keyframes loading {
     0% {
