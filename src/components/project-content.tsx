@@ -1,43 +1,41 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import Badge from './ui/badge';
-
+import Image from "next/image";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import Badge from "./ui/badge";
 
 interface ProjectContentProps {
   title: string;
   subtitle: string;
   imgSrc: string;
-  features: string[];
+  features: {
+    title: string;
+    description: string;
+  }[];
   tags: string[];
   links: {
     title: string;
     url: string;
   }[];
-  description: string;  
+  description: string;
   slug: string;
   date: string;
+  overview: string;
 }
 
 export default function ProjectContent({
-  title,  
+  title,
   imgSrc,
   tags,
   links,
-  description, 
+  description,
   features,
-  date
+  date,
+  overview,
 }: ProjectContentProps) {
   return (
-    <div className="flex flex-col gap-4 pt-5">
-      <div className="flex justify-between items-center gap-4">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-100">
-          {title}
-        </h1>
-        <span className="text-gray-400 text-sm md:text-base">{date}</span>
-      </div>
-      <div className="w-full rounded-lg pt-4">
+    <div className="flex flex-col gap-4 pt-28 mx-auto lg:max-w-[1200px]">
+      <div className="w-full rounded-lg">
         <div className="relative h-[260px] md:h-[460px] lg:h-[660px] w-full rounded-lg shadow-sm">
           <Image
             src={imgSrc}
@@ -49,30 +47,43 @@ export default function ProjectContent({
         </div>
       </div>
 
-      <div className="flex w-full flex-col md:flex-row shadow-sm mt-5 gap-8">
-        <div className="">
-          <div className="flex items-center gap-4">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-              About the project 💻
-            </h2>
+      <div className="flex flex-col md:flex-row shadow-sm mt-8 gap-8">
+        <div className="lg:max-w-[700px]">
+          <div className="flex justify-between items-center gap-4">
+            <h1 className="text-xl md:text-2xl lg:text-5xl font-semibold text-text-primary">
+              {title}
+            </h1>
+            <span className="text-text-secondary text-sm">{date}</span>
           </div>
-          <article className="prose prose-purple prose-invert mt-6 max-w-none">
-            <p className="text-base md:text-lg text-gray-300">{description}</p>
+          <article className="prose prose-purple prose-invert mt-5">
+            <p className="text-base text-text-secondary">{description}</p>
           </article>
 
-          <div className="mt-6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+          <div className="items-center gap-4 my-12">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-text-primary border-b border-bg-700 pb-2">
+              Overview 💻
+            </h2>
+            <p className="text-base text-text-secondary mt-5">{overview}</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-text-primary border-b border-bg-700 pb-2">
               Features 🚀
             </h2>
-            <ul className="mt-4 space-y-2 text-base md:text-lg text-gray-300">
+            <ul className="mt-5 space-y-3 text-base text-text-secondary">
               {features.map((feat, index) => (
-                <li key={index}>{feat}</li>
+                <li key={index}>
+                  <p>
+                    <strong className="text-text-primary">{feat.title}</strong>{" "}
+                    {feat.description}
+                  </p>
+                </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="h-fit lg:sticky lg:top-8">
+        <div className="h-fit lg:sticky lg:top-8 lg:w-full">
           <div className="space-y-8 rounded-xl border border-gray-800 bg-gray-900/50 p-6 backdrop-blur-sm">
             {/* Project Links */}
             <div>

@@ -10,13 +10,6 @@ const Projects = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto py-12 md:py-36 px-5" id="projects">
-      {/* <div className="flex flex-wrap gap-3 items-center mb-16">
-        <div className="w-8 h-0.5 bg-white"></div>
-        <h2 className="text-3xl sm:text-4xl text-[#ABABB5] font-bold">
-          Projects
-        </h2>
-      </div> */}
-
       <div className="flex justify-center flex-col items-center pb-10">
         <h1 className="text-4xl max-w-2xl font-bold text-center">
           Featured <span className="text-[#0070f3]">Projects</span>
@@ -35,7 +28,6 @@ const Projects = () => {
               title={project.title}
               subtitle={project.subtitle}
               isHovered={hoveredIndex === index}
-              isBlurred={hoveredIndex !== null && hoveredIndex !== index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             />

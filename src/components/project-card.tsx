@@ -6,7 +6,6 @@ interface ProjectCardProps {
   subtitle: string;
   imgCover: string;
   isHovered: boolean;
-  isBlurred: boolean;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }
@@ -16,7 +15,6 @@ const ProjectCard = ({
   subtitle,
   imgCover,
   isHovered,
-  isBlurred,
   onMouseEnter,
   onMouseLeave,
 }: ProjectCardProps) => {
@@ -35,7 +33,7 @@ const ProjectCard = ({
           alt="projects"
           className={`w-full h-[300px] md:h-[350px] object-cover transition-all duration-300 ${
             isHovered ? "scale-105" : "scale-100"
-          } ${isBlurred ? "blur-sm" : "blur-none"}`}
+          }`}
         />
       </div>
 
