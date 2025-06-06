@@ -30,7 +30,10 @@ const About = () => {
     "Spring Boot",
   ];
   return (
-    <section className="py-20 px-5 max-w-screen-xl mx-auto" id="about">
+    <section
+      className="py-20 px-5 max-w-screen-xl mx-auto scroll-mt-16"
+      id="about"
+    >
       <div className="flex justify-center flex-col items-center pb-10">
         <h1 className="text-4xl max-w-2xl font-bold text-center">
           About <span className="text-[#0070f3]">Me</span>

@@ -134,10 +134,10 @@ import {
 import React, { useState } from "react";
 
 const items = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Projects", link: "/projects" },
-  { name: "Contact", link: "/contact" },
+  { name: "Home", link: "/#home" },
+  { name: "About", link: "/#about" },
+  { name: "Projects", link: "/#projects" },
+  { name: "Contact", link: "/#contact" },
 ];
 
 export default function Header() {
@@ -149,7 +149,7 @@ export default function Header() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={items} onItemClick={() => console.log("Clicou")} />
-        <NavbarButton href="/login">My Resume</NavbarButton>
+        <NavbarButton href="#">My Resume</NavbarButton>
       </NavBody>
 
       {/* Navbar para mobile */}

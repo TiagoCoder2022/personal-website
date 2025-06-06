@@ -20,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} antialiased bg-[#0b0b0d] text-white`}>
+    <html lang="en" className="!scroll-smooth">
+      <body
+        className={`${inter.variable} antialiased bg-bg-900 text-text-primary`}
+      >
         <Header />
         {children}
         <Footer />

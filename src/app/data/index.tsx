@@ -1,3 +1,5 @@
+import { Github, Instagram, Linkedin, Twitter, Mail } from "lucide-react";
+
 export const projects = [
   {
     id: 1,
@@ -356,5 +358,33 @@ export const projects = [
         url: "https://github.com/TiagoCoder2022/task-manager-app/",
       },
     ],
+  },
+];
+
+export const socialMedia = [
+  {
+    id: 1,
+    icon: <Github />,
+    link: "https://github.com/TiagoCoder2022",
+  },
+  {
+    id: 2,
+    icon: <Instagram />,
+    link: "https://www.instagram.com/_tiagoalves/",
+  },
+  {
+    id: 3,
+    icon: <Linkedin />,
+    link: "https://www.linkedin.com/in/tiago-dev/",
+  },
+  {
+    id: 4,
+    icon: <Twitter />,
+    link: "https://x.com/TiagoCoder2022",
+  },
+  {
+    id: 5,
+    icon: <Mail />,
+    link: "mailto:tiagodev.alves@gmail.com",
   },
 ];
