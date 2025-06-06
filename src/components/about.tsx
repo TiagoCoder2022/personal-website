@@ -1,17 +1,20 @@
-import Image from 'next/image'
-import React from 'react'
-import B1 from '../../public/assets/img/b1.svg'
+import Image from "next/image";
+import React from "react";
+import B1 from "../../public/assets/img/b1.svg";
 import Badge from "./ui/badge";
 
 const About = () => {
   const frontendSkills = [
-    "React",
+    "React.js",
     "Next.js",
-    "Tailwind CSS",
+    "Redux",
+    "TailwindCSS",
     "TypeScript",
     "JavaScript",
     "HTML",
     "CSS",
+    "Shadcn",
+    "Styled Components",
   ];
   const backendSkills = [
     "Node.js",
@@ -20,6 +23,11 @@ const About = () => {
     "PostgreSQL",
     "GraphQL",
     "REST API",
+    "Drizzle ORM",
+    "Prisma ORM",
+    "Redis",
+    "Java",
+    "Spring Boot",
   ];
   return (
     <section className="py-20 px-5 max-w-screen-xl mx-auto" id="about">
@@ -45,8 +53,8 @@ const About = () => {
             Passionate Web Developer
           </h2>
           <div className="py-8">
-            <p className="text-base md:text-lg text-white/70">
-              With 3 years of experience in Web Development, I specialize in
+            <p className="text-base text-text-secondary">
+              With 2 years of experience in Web Development, I specialize in
               React, Next.js, Typescript, and Node.js. I love crafting
               high-performance web applications, optimizing user experiences,
               and writing clean, maintainable code. Whether it&apos;s building
@@ -78,8 +86,10 @@ const About = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         <div className="p-6 rounded-xl border-white/15 border hover:-translate-y-1 transition-all">
-          <h3 className="text-xl font-bold mb-4">📚 Education</h3>
-          <ul className="list-disc list-inside text-base md:text-lg text-white/70 space-y-2">
+          <h3 className="text-xl font-bold mb-4 text-text-primary">
+            📚 Education
+          </h3>
+          <ul className="list-disc list-inside text-base text-text-secondary space-y-2">
             <li>
               <strong>Graduation: Information Tecnology Management</strong> -
               Universidade Paulista (2012 - 2013)
@@ -92,8 +102,10 @@ const About = () => {
         </div>
 
         <div className="p-6 rounded-xl border-white/15 border hover:-translate-y-1 transition-all">
-          <h3 className="text-xl font-bold mb-4">💼 Work Experience</h3>
-          <div className="space-y-4 text-base md:text-lg text-white/70">
+          <h3 className="text-xl font-bold mb-4 text-text-primary">
+            💼 Work Experience
+          </h3>
+          <div className="space-y-4 text-base text-text-secondary">
             <div>
               <h4 className="font-bold">
                 Full-Stack developer at Almode (2024 - 2025)
@@ -114,4 +126,4 @@ const About = () => {
   );
 };
 
-export default About
+export default About;
