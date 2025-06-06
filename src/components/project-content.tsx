@@ -83,7 +83,7 @@ export default function ProjectContent({
           </div>
         </div>
 
-        <div className="h-fit lg:sticky lg:top-8 lg:w-full">
+        <div className="h-fit lg:sticky lg:top-8 lg:max-w-[450px]">
           <div className="space-y-8 rounded-xl border border-gray-800 bg-gray-900/50 p-6 backdrop-blur-sm">
             {/* Project Links */}
             <div>

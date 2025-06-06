@@ -3,7 +3,6 @@ import About from "@/components/about";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
 import LoadingScreen from "@/components/loading-screen";
-import Footer from "@/components/footer";
 
 import { useState } from "react";
 import Contact from "@/components/contact";
@@ -19,7 +18,6 @@ export default function Home() {
           <About />
           <Projects />
           <Contact />
-          <Footer />
         </>
       )}
     </>
