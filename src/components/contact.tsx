@@ -1,7 +1,7 @@
-// import { FaLocationArrow } from "react-icons/fa";
 import { Navigation } from "lucide-react";
 import MagicButton from "./ui/magic-button";
 import { socialMedia } from "@/app/data";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -21,13 +21,13 @@ const Contact = () => {
             big idea.
           </h2>
 
-          <a href="mailto:tiagonewalves@hotmail.com" className="mt-5">
+          <Link href="/contact" className="mt-5">
             <MagicButton
               title="Let's get in touch"
               icon={<Navigation />}
               position="right"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex md:hidden items-center justify-center gap-5 mt-8">
           {socialMedia.map((social) => (
