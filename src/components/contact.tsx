@@ -6,7 +6,7 @@ import { socialMedia } from "@/app/data";
 const Contact = () => {
   return (
     <section className="max-w-screen-xl mx-auto px-5" id="contact">
-      <div className="flex flex-col justify-center rounded-2xl w-full py-10 lg:py-16 bg-bg-800 px-6">
+      <div className="flex flex-col justify-center rounded-3xl w-full py-10 lg:py-12 bg-bg-800 px-6">
         <div className="flex justify-center flex-col items-center">
           <div className="py-2 px-4 rounded-full bg-bg-600 flex items-center gap-2">
             <span className="relative flex size-2">
@@ -21,7 +21,7 @@ const Contact = () => {
             big idea.
           </h2>
 
-          <a href="mailto:tiagonewalves@hotmail.com">
+          <a href="mailto:tiagonewalves@hotmail.com" className="mt-5">
             <MagicButton
               title="Let's get in touch"
               icon={<Navigation />}
