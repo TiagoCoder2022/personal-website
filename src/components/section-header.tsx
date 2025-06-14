@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import BlurText from "./ui/blur-text";
 import { useRef } from "react";
- // ajuste o caminho se necessário
+import { clashDisplay } from "@/lib/fonts";
 
 type SectionHeaderProps = {
   title: string;
@@ -18,7 +18,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   const paragraphRef = useRef(null);
   const isInView = useInView(paragraphRef, { once: true });
-  
+
   const [before, after] = highlightedWord
     ? title.split(new RegExp(`\\b${highlightedWord}\\b`))
     : [title, ""];
@@ -31,7 +31,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
         delay={150}
         animateBy="words"
         direction="top"
-        className="text-4xl max-w-2xl font-bold text-center"
+        className={` text-3xl md:text-5xl max-w-2xl font-bold text-center ${clashDisplay.className} antialiased`}
       >
         {before}
         {highlightedWord && (
@@ -43,7 +43,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
       {description && (
         <motion.p
           ref={paragraphRef}
-          className="text-base text-text-secondary my-5 text-center max-w-2xl"
+          className="text-base text-text-secondary my-3 md:my-5 text-center max-w-2xl"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}

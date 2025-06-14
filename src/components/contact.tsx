@@ -3,6 +3,7 @@ import MagicButton from "./ui/magic-button";
 import { socialMedia } from "@/app/data";
 import Link from "next/link";
 import BlurText from "./ui/blur-text";
+import { clashDisplay } from "@/lib/fonts";
 
 const Contact = () => {
   return (
@@ -23,7 +24,7 @@ const Contact = () => {
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-4xl lg:text-5xl max-w-md font-semibold text-center my-5 text-text-primary"
+              className={`text-4xl lg:text-5xl max-w-md font-semibold text-center my-5 text-text-primary ${clashDisplay.className}`}
             >
               {"Let's create "}
               <span className="text-[#0070f3]">your</span>

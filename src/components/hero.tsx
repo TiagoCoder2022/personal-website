@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Spotlight } from "./ui/spotlight";
 import Technologies from "@/components/technoligies";
 import Link from "next/link";
+import { clashDisplay } from "@/lib/fonts";
 
 const Hero = () => {
   return (
@@ -12,12 +13,14 @@ const Hero = () => {
       <div className="flex flex-col items-center justify-center gap-4 px-2 lg:gap-2 lg:pl-10 xl:pl-0">
         <div className="pt-24 xl:pt-28 flex gap-2">
           <span className="text-3xl">👋🏻 </span>
-          <h2 className="font-bold text-3xl lg:text-4xl text-transparent bg-gradient-to-r from-purple-500 to-white bg-clip-text">
-            Hi, I&apos;m Tiago a
+          <h2 className="font-bold text-3xl lg:text-4xl text-transparent bg-gradient-to-r from-purple-500 to-white bg-clip-text pb-1">
+            Hey! It&apos;s me Tiago.
           </h2>
         </div>
 
-        <h1 className="py-8 relative z-10 mx-auto max-w-3xl text-center font-bold text-5xl md:text-6xl lg:text-8xl text-text-primary">
+        <h1
+          className={`py-8 relative z-10 mx-auto max-w-3xl text-center font-bold text-5xl md:text-6xl lg:text-8xl text-text-primary ${clashDisplay.className}`}
+        >
           {"Full-Stack Web Developer".split(" ").map((word, index) => (
             <motion.span
               key={index}
