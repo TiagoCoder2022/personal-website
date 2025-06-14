@@ -6,7 +6,9 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden" id="home">
-      <Spotlight />
+      <div className="hidden md:block absolute top-0 left-0 w-full h-full">
+        <Spotlight />
+      </div>
       <div className="flex flex-col items-center justify-center gap-4 px-2 lg:gap-2 lg:pl-10 xl:pl-0">
         <div className="pt-24 xl:pt-28 flex gap-2">
           <span className="text-3xl">👋🏻 </span>
