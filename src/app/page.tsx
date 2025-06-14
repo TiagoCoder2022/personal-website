@@ -11,15 +11,14 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
-      {isLoaded && (
-        <>
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-        </>
-      )}
+      {/* {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      {isLoaded && ()} */}
+      <>
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </>
     </>
   );
 }

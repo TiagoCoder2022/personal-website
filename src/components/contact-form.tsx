@@ -7,28 +7,82 @@ import { cn } from "@/lib/utils";
 import { TextArea } from "./ui/textarea";
 import MagicButton from "./ui/magic-button";
 import { Navigation } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Invalid email"),
+  message: z.string().min(5, "Message is required"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      //TODO:
+      // toast.success("Agendamento criado com sucesso.");
+      reset();
+    } catch (error) {
+      // toast.error("Erro ao criar agendamento.");
+      console.error(error);
+    }
   };
   return (
     <div className=" mx-auto w-full rounded-none bg-bg-900 py-4 px-4 md:rounded-2xl md:px-0">
-      <form className="my-5" onSubmit={handleSubmit}>
+      <form className="my-5" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4 flex flex-col md:space-y-0">
           <LabelInputContainer>
             <Label htmlFor="name">Name</Label>
-            <Input id="name" placeholder="Tyler" type="text" />
+            <Input id="name" {...register("name")} placeholder="Tyler" />
+            {errors.name && (
+              <span className="text-red-500 text-sm">
+                {errors.name.message}
+              </span>
+            )}
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            {...register("email")}
+            placeholder="email@exemplo.com"
+          />
+          {errors.email && (
+            <span className="text-red-500 text-sm">{errors.email.message}</span>
+          )}
         </LabelInputContainer>
         <LabelInputContainer className="mb-6">
           <Label htmlFor="password">Message</Label>
-          <TextArea id="message" placeholder="Write your message here..." />
+          <TextArea
+            id="message"
+            {...register("message")}
+            placeholder="Write your message..."
+          />
+          {errors.message && (
+            <span className="text-red-500 text-sm">
+              {errors.message.message}
+            </span>
+          )}
         </LabelInputContainer>
 
         {/* <button
@@ -39,7 +93,7 @@ export function ContactForm() {
           <BottomGradient />
         </button> */}
         <MagicButton
-          title="Send Message"
+          title={isSubmitting ? "Sending..." : "Send Message"}
           icon={<Navigation />}
           position="right"
         />

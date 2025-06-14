@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-label": "^2.1.7",
     "@tabler/icons-react": "^3.34.0",
     "clsx": "^2.1.1",
@@ -18,8 +19,11 @@
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.57.0",
     "react-icons": "^5.4.0",
-    "tailwind-merge": "^3.3.0"
+    "resend": "^4.6.0",
+    "tailwind-merge": "^3.3.0",
+    "zod": "^3.25.64"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
