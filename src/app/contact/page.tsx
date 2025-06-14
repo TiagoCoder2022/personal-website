@@ -1,20 +1,41 @@
+"use client";
+
 import { ContactForm } from "@/components/contact-form";
 import { socialMedia } from "../data";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   return (
-    <section className="flex flex-col items-center justify-center h-screen mt-14 max-w-screen-xl mx-auto">
+    <section className="flex flex-col items-center justify-center mt-28 max-w-screen-xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center">
-        <div className="">
-          <h2 className="text-2xl lg:text-5xl max-w-md font-semibold text-start my-2 text-text-primary">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1, delay: 0.1 }}
+        >
+          <motion.h2
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-2xl lg:text-5xl max-w-md font-semibold text-start my-2 text-text-primary mx-auto md:mx-0"
+          >
             Let&apos;s start a <span className="text-[#0070f3]">project</span>{" "}
             together
-          </h2>
-          <ContactForm />
-        </div>
+          </motion.h2>
 
-        <div className="flex flex-col justify-start rounded-3xl w-full py-10 lg:py-8 bg-bg-800 px-6">
+          <ContactForm />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="flex flex-col justify-start rounded-3xl w-full py-10 lg:py-8 bg-bg-800 px-6 mx-auto md:mx-0"
+        >
           <div className="flex justify-center flex-col items-center">
             <div className="py-2 px-4 rounded-full bg-bg-600 flex items-center gap-2">
               <span className="relative flex size-2">
@@ -54,7 +75,7 @@ const ContactPage = () => {
               </a>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
