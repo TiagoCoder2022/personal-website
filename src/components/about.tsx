@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import B1 from "../../public/assets/img/b1.svg";
 import Badge from "./ui/badge";
+import BlurText from "./ui/blur-text";
+import SectionHeader from "./section-header";
 
 const About = () => {
   const frontendSkills = [
@@ -34,11 +36,11 @@ const About = () => {
       className="py-20 px-5 max-w-screen-xl mx-auto scroll-mt-16"
       id="about"
     >
-      <div className="flex justify-center flex-col items-center pb-10">
-        <h1 className="text-4xl max-w-2xl font-bold text-center">
-          About <span className="text-[#0070f3]">Me</span>
-        </h1>
-      </div>
+      <SectionHeader
+        title="About Me"
+        highlightedWord="Me"
+        description="A little bit about my journey and skills as a web developer."
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6">
         <div className="border border-white/15 rounded-xl overflow-hidden hover:-translate-y-1 transition-all">

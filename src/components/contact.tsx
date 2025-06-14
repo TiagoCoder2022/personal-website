@@ -2,10 +2,11 @@ import { Navigation } from "lucide-react";
 import MagicButton from "./ui/magic-button";
 import { socialMedia } from "@/app/data";
 import Link from "next/link";
+import BlurText from "./ui/blur-text";
 
 const Contact = () => {
   return (
-    <section className="max-w-screen-xl mx-auto px-5" id="contact">
+    <section className="max-w-screen-xl mx-auto px-5 md:pt-14" id="contact">
       <div className="flex flex-col justify-center rounded-3xl w-full py-10 lg:py-12 bg-bg-800 px-6">
         <div className="flex justify-center flex-col items-center">
           <div className="py-2 px-4 rounded-full bg-bg-600 flex items-center gap-2">
@@ -16,10 +17,19 @@ const Contact = () => {
 
             <p className="text-sm">Available for work</p>
           </div>
-          <h2 className="text-4xl lg:text-5xl max-w-md font-semibold text-center my-5 text-text-primary">
-            Let&apos;s create <span className="text-[#0070f3]">your</span> next
-            big idea.
-          </h2>
+
+          <div className="flex justify-center">
+            <BlurText
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-4xl lg:text-5xl max-w-md font-semibold text-center my-5 text-text-primary"
+            >
+              {"Let's create "}
+              <span className="text-[#0070f3]">your</span>
+              {" next big idea."}
+            </BlurText>
+          </div>
 
           <Link href="/contact" className="mt-5">
             <MagicButton
