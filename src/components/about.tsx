@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import B1 from "../../public/assets/img/b1.svg";
 import Badge from "./ui/badge";
-import BlurText from "./ui/blur-text";
 import SectionHeader from "./section-header";
 
 const About = () => {
