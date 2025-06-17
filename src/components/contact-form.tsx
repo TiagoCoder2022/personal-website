@@ -10,6 +10,7 @@ import { Navigation } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -38,11 +39,11 @@ export function ContactForm() {
         },
         body: JSON.stringify(data),
       });
-      //TODO:
-      // toast.success("Agendamento criado com sucesso.");
+
+      toast.success("Message sent successfully!");
       reset();
     } catch (error) {
-      // toast.error("Erro ao criar agendamento.");
+      toast.error("Erro on sending message.");
       console.error(error);
     }
   };

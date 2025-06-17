@@ -48,7 +48,7 @@ export default function Header() {
             <button
               key={item.name}
               onClick={() => handleNavClick(item.link)}
-              className="text-base text-neutral-800 dark:text-neutral-200/80 hover:text-neutral-200 "
+              className="text-base text-neutral-200/80 hover:text-neutral-200 "
             >
               {item.name}
             </button>
@@ -75,7 +75,7 @@ export default function Header() {
                 handleNavClick(item.link);
                 setMenuOpen(false);
               }}
-              className="w-full px-4 py-2 text-left text-sm text-neutral-800 dark:text-neutral-200"
+              className="w-full px-4 py-2 text-left text-sm text-neutral-200"
             >
               {item.name}
             </button>

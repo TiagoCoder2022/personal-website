@@ -349,8 +349,8 @@ export const projects = [
       "Axios",
       "Clerk",
     ],
-    imgSrc: "/assets/img/task-manager.png",
-    imgCover: "/assets/img/task-manager.png",
+    imgSrc: "/assets/img/project-6.png",
+    imgCover: "/assets/img/project-6.png",
     links: [
       { title: "Live Demo", url: "https://task-manager-app-mocha.vercel.app" },
       {
