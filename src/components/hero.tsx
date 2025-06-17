@@ -11,12 +11,18 @@ const Hero = () => {
         <Spotlight />
       </div>
       <div className="flex flex-col items-center justify-center gap-4 px-2 lg:gap-2 lg:pl-10 xl:pl-0">
-        <div className="pt-24 xl:pt-28 flex gap-2">
+        <motion.div
+          initial={{ opacity: 0, y: 100, scale: 0.5 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 100, scale: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="pt-24 xl:pt-28 flex gap-2"
+        >
           <span className="text-3xl">👋🏻 </span>
           <h2 className="font-bold text-3xl lg:text-4xl text-transparent bg-gradient-to-r from-purple-500 to-white bg-clip-text pb-1">
             Hey! It&apos;s me Tiago.
           </h2>
-        </div>
+        </motion.div>
 
         <h1
           className={`py-8 relative z-10 mx-auto max-w-3xl text-center font-bold text-5xl md:text-6xl lg:text-8xl text-text-primary ${clashDisplay.className}`}
