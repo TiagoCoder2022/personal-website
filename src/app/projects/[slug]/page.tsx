@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import { projects } from "@/app/data";
 import ProjectContent from "@/components/project-content";
 
-type PageProps = {
-  params: {
+type Props = {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export async function generateStaticParams() {
@@ -14,8 +14,9 @@ export async function generateStaticParams() {
   }));
 }
 
-const ProjectsPage = async ({ params }: PageProps) => {
-  const { slug } = params;
+const ProjectsPage = async ({ params }: Props) => {
+  // Aguarda a resolução da Promise dos params
+  const { slug } = await params;
 
   const projectData = projects.find((project) => project.slug === slug);
 

@@ -1,7 +1,7 @@
 "use client";
 import About from "@/components/about";
 import Hero from "@/components/hero";
-import Projects from "@/components/projects";
+import ProjectsSection from "@/components/projects-section";
 import Contact from "@/components/contact";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <Projects />
+      <ProjectsSection />
       <Contact />
     </>
   );

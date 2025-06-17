@@ -6,7 +6,7 @@ import ProjectCard from "./project-card";
 import { projects } from "@/app/data";
 import SectionHeader from "./section-header";
 
-const Projects = () => {
+const ProjectsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -35,4 +35,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsSection;
