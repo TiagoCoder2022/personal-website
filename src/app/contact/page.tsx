@@ -22,7 +22,7 @@ const ContactPage = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-2xl lg:text-5xl max-w-md font-semibold text-start my-2 text-text-primary mx-auto md:mx-0"
           >
-            Let&apos;s start a <span className="text-[#0070f3]">project</span>{" "}
+            Let&apos;s start a <span className="text-purple-500">project</span>{" "}
             together
           </motion.h2>
 

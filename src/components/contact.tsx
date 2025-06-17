@@ -27,7 +27,7 @@ const Contact = () => {
               className={`text-4xl lg:text-5xl max-w-md font-semibold text-center my-5 text-text-primary ${clashDisplay.className}`}
             >
               {"Let's create "}
-              <span className="text-[#0070f3]">your</span>
+              <span className="text-purple-500">your</span>
               {" next big idea."}
             </BlurText>
           </div>

@@ -35,7 +35,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
       >
         {before}
         {highlightedWord && (
-          <span className="text-[#0070f3]">{highlightedWord}</span>
+          <span className="text-purple-500">{highlightedWord}</span>
         )}
         {after}
       </BlurText>

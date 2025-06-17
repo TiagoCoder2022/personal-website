@@ -55,7 +55,9 @@ export default function Header() {
             </button>
           ))}
         </div>
-        <NavbarButton href="#">My Resume</NavbarButton>
+        <NavbarButton href="/resume/Full-Stack-cv.pdf" download>
+          My Resume
+        </NavbarButton>
       </NavBody>
 
       <MobileNav>
@@ -79,7 +81,11 @@ export default function Header() {
               {item.name}
             </button>
           ))}
-          <NavbarButton href="/login" className="mt-4 w-full">
+          <NavbarButton
+            href="/resume/Full-Stack-cv.pdf"
+            download
+            className="mt-4 w-full"
+          >
             My Resume
           </NavbarButton>
         </MobileNavMenu>
