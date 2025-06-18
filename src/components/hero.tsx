@@ -75,13 +75,13 @@ const Hero = () => {
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <Link href="/#contact">
-            <button className="w-60 shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-purple-400 px-6 py-3 bg-purple-500 rounded-lg text-white font-light transition-all duration-300 hover:-translate-y-0.5 ease-linear">
+            <button className="w-full md:w-60 shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-purple-400 px-6 py-3 bg-purple-500 rounded-lg text-white font-light transition-all duration-300 hover:-translate-y-0.5 ease-linear">
               Contact me
             </button>
           </Link>
 
           <Link href="https://github.com/TiagoCoder2022" target="_blank">
-            <button className="w-60 transform rounded-lg border bg-transparent px-6 py-3 font-medium  transition-all duration-300 hover:-translate-y-0.5  border-gray-700 text-white hover:bg-gray-900">
+            <button className="w-full md:w-60 transform rounded-lg border bg-transparent px-6 py-3 font-medium  transition-all duration-300 hover:-translate-y-0.5  border-gray-700 text-white hover:bg-gray-900">
               Github
             </button>
           </Link>

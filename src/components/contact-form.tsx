@@ -48,7 +48,7 @@ export function ContactForm() {
     }
   };
   return (
-    <div className=" mx-auto w-full rounded-none bg-bg-900 py-4 px-4 md:rounded-2xl md:px-0">
+    <div className=" mx-auto w-full rounded-none bg-bg-900 py-4 md:rounded-2xl md:px-0">
       <form className="my-5" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4 flex flex-col md:space-y-0">
           <LabelInputContainer>

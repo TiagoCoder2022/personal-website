@@ -258,36 +258,36 @@ export const projects = [
   },
   {
     id: 5,
-    slug: "connect-web",
-    date: "February 2025",
-    title: "Connect",
+    slug: "doctor-flow",
+    date: "June 2025",
+    title: "Doctor Flow",
     subtitle: "Full-Stack Project",
     description:
-      "The project is a responsive website for registration and referrals for events. This is a project for the NLW Connect event.",
+      "Doctor Flow is a modern, responsive SaaS platform designed for clinics to efficiently manage appointments, doctors, and patient data. It enables users to register new clinics, schedule appointments, and maintain structured medical records — all through an intuitive and accessible interface.",
     overview:
-      "Built with React.js and TypeScript, Connect Web uses Drizzle ORM with PostgreSQL, Tailwind CSS for styling, and Redis for efficient session handling. The app makes it easy for users to sign up for events and track their referrals.",
+      "Developed with Next.js and TypeScript, Doctor Flow integrates Prisma ORM with PostgreSQL for seamless database management, and leverages Tailwind CSS alongside Shadcn UI for a clean, responsive UI. Session handling is optimized with Redis, and form validation is handled using Zod. The system prioritizes performance, accessibility, and a developer-friendly architecture, making it a scalable solution for healthcare workflows.",
     features: [
       {
-        title: "User Registration:",
-        description: "Easy sign-up process for event participation.",
-      },
-      {
-        title: "Event Access Tracking:",
-        description: "View and manage event access links by registrant ID.",
-      },
-      {
-        title: "User Ranking:",
-        description: "Track user rankings based on event registrations.",
-      },
-      {
-        title: "Responsiveness:",
+        title: "Appointment Scheduling:",
         description:
-          "Seamless experience across all devices with responsive design.",
+          "Intuitive interface to book, view, and manage appointments.",
       },
       {
-        title: "Code Modularity & Reusability:",
+        title: "Patient and Doctor Registration:",
+        description: "Centralized organization of information.",
+      },
+      {
+        title: "Medical Records Management:",
+        description: "Secure storage and easy access to patient history.",
+      },
+      {
+        title: "Notifications and Reminders:",
         description:
-          "Well-structured components and service layers for scalable development and maintenance.",
+          "Optimize the time of both patients and healthcare professionals.",
+      },
+      {
+        title: "Reports and Dashboards:",
+        description: "Visualize key data to support decision-making.",
       },
     ],
     tags: [
@@ -295,20 +295,16 @@ export const projects = [
       "Next.js",
       "Typescript",
       "Tailwindcss",
-      "Orval",
-      "Biome",
-      "Drizzle",
+      "Shadcn",
       "Postgresql",
-      "Redis",
-      "Fastify",
       "Zod",
+      "Better-auth",
     ],
-    imgSrc: "/assets/img/devstage.png",
-    imgCover: "/assets/img/devstage.png",
+    imgSrc: "/assets/img/working-on.png",
+    imgCover: "/assets/img/project-5.png",
     links: [
-      { title: "Live Demo", url: "https://connect-web-brown.vercel.app" },
-      { title: "API Doc", url: "https://connect-api-trpo.onrender.com/docs" },
-      { title: "GitHub", url: "https://github.com/TiagoCoder2022/connect-web" },
+      { title: "Soon", url: "#" },
+      { title: "GitHub", url: "https://github.com/TiagoCoder2022/doctor-flow" },
     ],
   },
   {

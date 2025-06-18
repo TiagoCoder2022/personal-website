@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const ContactPage = () => {
   return (
-    <section className="flex flex-col items-center justify-center mt-28 max-w-screen-xl mx-auto">
+    <section className="flex flex-col items-center justify-center mt-28 max-w-screen-xl mx-auto px-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
