@@ -300,10 +300,10 @@ export const projects = [
       "Zod",
       "Better-auth",
     ],
-    imgSrc: "/assets/img/working-on.png",
+    imgSrc: "/assets/img/doctor-flow-dash.png",
     imgCover: "/assets/img/project-5.png",
     links: [
-      { title: "Soon", url: "#" },
+      { title: "Live Demo", url: "https://doctor-flow.vercel.app" },
       { title: "GitHub", url: "https://github.com/TiagoCoder2022/doctor-flow" },
     ],
   },
